@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles2.css" />
+    <link rel="icon" href="./img/Logo.png" />
+    <link rel="stylesheet" href="../scream1-home/index.html" />
+    <title>sign in</title>
+  </head>
+  <body>
+    <section class="login-fundo">
+      <div class="all-login">
+        <ul id="all-login">
+          <li>
+            <img id="img-login" src="./img/Group 1.png" alt="" /><span
+              class="img-login"
+              >NAVE</span
+            >
+          </li>
+          <li class="login-signin">
+            <a
+              class="sign"
+              href="#"
+              style="border-bottom: 2px solid whitesmoke; padding-bottom: 5px"
+              >sign up</a
+            >
+            <a class="login" href="./index1.html">log in</a>
+          </li>
+          <form onsubmit="logar(); return false">
+            <li>
+              <input
+                placeholder="Email"
+                class="login-input"
+                id="login"
+                type="text"
+              />
+            </li>
+            <li>
+              <input
+                placeholder="Senha"
+                class="login-input"
+                id="senha"
+                type="password"
+              />
+            </li>
+            <li>
+              <input
+                type="submit"
+                class="login-button"
+                id="sighUp"
+                value="sign up"
+              />
+            </li>
+          </form>
+        </ul>
+      </div>
+    </section>
+   <!-- <script>
+      function logar() {
+        var login = document.getElementById("login").value;
+        var senha = document.getElementById("senha").value;
+        let listLogin = [
+          "michele",
+          "gabriel",
+          "janv",
+          "igor",
+          "nathan",
+          "luana",
+        ];
+        let listSenha = [
+          "michele",
+          "estagiario",
+          "vascooo",
+          "8==D",
+          "camisa-branca",
+          "lua",
+        ];
+        for (var i = 0; i <= 5; i++) {
+          if (login == listLogin[i] && senha == listSenha[i]) {
+            alert("sucesso");
+            location.href = "../scream1-home/index.html";
+            break;
+          }
+
+          if (i >= 5) {
+            alert("Usuario ou senha incorretos ");
+            console.log(listLogin);
+            console.log(listSenha);
+          }
+        }
+      }
+    </script>
+-->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+      import { getDatabase } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDbbxHfYyZpdFeWTvhMFS_LJCdL93otwEQ",
+        authDomain: "sistema-de-signin-whitesun.firebaseapp.com",
+        databaseURL:
+          "https://sistema-de-signin-whitesun-default-rtdb.firebaseio.com",
+        projectId: "sistema-de-signin-whitesun",
+        storageBucket: "sistema-de-signin-whitesun.appspot.com",
+        messagingSenderId: "382351022014",
+        appId: "1:382351022014:web:25a71ba5a87bbcf19f4bef",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const auth = getAuth();
+
+      sighUp.addEventListner("click", (e) => {
+        var email = document.getElementById('login').value;
+        var password = document.getElementById('senha').value;
+        
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/auth.user
+            const user = userCredential.user;
+            alert('user created!');
+            // ...
+          } else {
+
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            
+            alert(errorMessage)
+            // ...
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

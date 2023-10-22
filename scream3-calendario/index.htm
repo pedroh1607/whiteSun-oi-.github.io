@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Agenda</title>
+  </head>
+  <body>
+    <section>
+      <section class="sidebar">
+        <img class="logo-sidebar" src="./img/sidebar/Group 1.png" alt="" />
+        <ul class="main">
+          <li class="center">
+            <a href="../scream1-home/index.html" class="home-icon" id="icons">
+              <img src="./img/sidebar/home icon.png" alt="" width="45px" />
+              <td>Home</td>
+            </a>
+
+            <a
+              href="../scream2-presenca/index.html"
+              class="verificado-icon"
+              id="icons"
+            >
+              <img
+                src="./img/sidebar/verificado icon.png"
+                alt=""
+                width="45px"
+              />
+              <td>Presença</td>
+            </a>
+
+            <a href="#" class="calendario-icon" id="icons">
+              <img
+                src="./img/sidebar/Ellipse 16.png"
+                alt=""
+                width="60px"
+              />
+              <td>Agenda</td>
+            </a>
+          </li>
+          <li class="sair">
+            <a
+              href="../login-e-signin/index1.html"
+              class="sair-icon"
+              onclick="logar(); return false"
+            >
+              <img
+                src="./img/sidebar/sair icon.png"
+                alt=""
+                max-width="40px"
+                min-width="20px"
+              />
+            </a>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section class="area-de-trabalho">
+      <div class="dropdown">
+        <form action="#" id="dropdown">
+          <label class="turma" for="salas">Turma</label>
+          <select name="salas" id="salas">
+            <optgroup id="gurpo-de-opcao" label="primeiro ano">
+              <option value="1">1001</option>
+              <option value="2">1002</option>
+              <option value="3">1003</option>
+              <option value="4">1004</option>
+            </optgroup>
+            <optgroup id="gurpo-de-opcao" label="segundo ano">
+              <option value="21">2001</option>
+              <option value="22">2002</option>
+              <option value="23">2003</option>
+              <option value="24">2004</option>
+            </optgroup>
+            <optgroup id="gurpo-de-opcao" label="terceiro ano">
+              <option value="31">3001</option>
+              <option value="32">3002</option>
+              <option value="33">3003</option>
+              <option value="34">3004</option>
+            </optgroup>
+          </select>
+        </form>
+      </div>
+
+      <div class="calendario">
+        <divsectio class="dia-semana">D</divsectio>
+        <divsectio class="dia-semana">S</divsectio>
+        <divsectio class="dia-semana">T</divsectio>
+        <divsectio class="dia-semana">Q</divsectio>
+        <divsectio class="dia-semana">Q</divsectio>
+        <divsectio class="dia-semana">S</divsectio>
+        <divsectio class="dia-semana">S</divsectio>
+        <div class="um">1</div>
+        <div class="dois">2</div>
+        <div class="tres">3</div>
+        <div class="quatro">4</div>
+        <div class="cinco">5</div>
+        <div class="seis">6</div>
+        <div class="sete">7</div>
+        <div class="oito">8</div>
+        <div class="nove">9</div>
+        <div class="10">10</div>
+        <div class="11">11</div>
+        <div class="12">12</div>
+        <div class="13">13</div>
+        <div class="14">14</div>
+        <div class="15">15</div>
+        <div class="16">16</div>
+        <div class="17">17</div>
+        <div class="18">18</div>
+        <div class="19">19</div>
+        <div class="20">20</div>
+        <div class="21">21</div>
+        <div class="22">22</div>
+        <div class="23">23</div>
+        <div class="24">24</div>
+        <div class="25">25</div>
+        <div class="26">26</div>
+        <div class="27">27</div>
+        <div class="28">28</div>
+        <div class="29">29</div>
+        <div class="30">30</div>
+        <div class="31">31</div>
+      </div>
+
+      <div class="horarios">horarios</div>
+
+      <div class="materias">
+        <header id="header-materias">1001</header>
+        <div class="horario">
+          <h3>
+            Horário
+          </h3>
+          <span id="horario-materias">10:30 - 12:15</span>
+        </div>
+        <div class="materia">
+          <h3>
+            Matéria
+          </h3>
+          <span id="materia-materias">quimica organica</span>
+        </div>
+        <a href="https://classroom.google.com"class="classroom"
+          >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/2372px-Google_Classroom_Logo.svg.png"
+            alt="classroom"
+            width="40px"
+          />
+          <span> classroom </span>
+        </a>
+        <div class="professor">
+        <h4>Professor:</h4>
+          <img id="img-prof" src="https://avatars.githubusercontent.com/u/35140312?v=4" alt="fabre" width="150px" height="200px">
+        </div>
+      </div>
+    </section>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
